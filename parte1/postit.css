@@ -70,44 +70,64 @@ div:hover {
   box-shadow: 10px 10px 5px rgba(100, 97, 97, 0.582);
 }
 
-@keyframes postitUp {
+@keyframes postit {
   from {
-    transform: translateY(-300px);
+    opacity: 0;
+    transform: scale(10);
+    rotate: 0deg;
   }
 
+  25% {
+    opacity: 0;
+    transform: scale(8);
+  }
   50% {
-    transform: translateY(-150px);
+    opacity: 0;
+    transform: scale(6);
   }
 
+  55% {
+    opacity: 1;
+    transform: scale(4);
+  }
+  65% {
+    opacity: 1;
+    transform: scale(2);
+  }
+
+  70% {
+    opacity: 1;
+    transform: scale(1);
+  }
   to {
-    transform: translateY(0px);
+    opacity: 1;
   }
 }
 
-div:nth-of-type(1),
-div:nth-of-type(2),
-div:nth-of-type(3),
+div:nth-of-type(1) {
+  animation: postit 3s;
+}
+
+div:nth-of-type(2) {
+  animation: postit 3.1s;
+}
+
+div:nth-of-type(3) {
+  animation: postit 3.2s;
+}
 div:nth-of-type(4) {
-  animation: postitUp 1s;
+  animation: postit 3.3s;
 }
 
-@keyframes postitDown {
-  from {
-    transform: translateY(300px);
-  }
-
-  50% {
-    transform: translateY(150px);
-  }
-
-  to {
-    transform: translateY(0px);
-  }
+div:nth-of-type(5) {
+  animation: postit 3.4s;
 }
-
-div:nth-of-type(5),
-div:nth-of-type(6),
-div:nth-of-type(7),
+div:nth-of-type(6) {
+  animation: postit 3.5s;
+}
+div:nth-of-type(7) {
+  animation: postit 3.6s;
+}
 div:nth-of-type(8) {
-  animation: postitDown 1s;
+  animation: postit 3.7s;
 }
